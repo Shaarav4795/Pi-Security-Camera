@@ -1,0 +1,25 @@
+"""
+Configuration file for Raspberry Pi Security Camera System
+Copy this file to config.py and edit the DISCORD_WEBHOOK_URL below
+"""
+
+# Discord Webhook URL - REQUIRED
+# Get this from: Discord Channel Settings → Integrations → Webhooks → Create Webhook
+DISCORD_WEBHOOK_URL = "YOUR_WEBHOOK_URL_HERE"
+
+# Motion Detection Settings
+MOTION_THRESHOLD = 8  # Lower = more sensitive (1-15)
+COOLDOWN_PERIOD = 30  # Seconds to wait between motion detections
+
+# Recording Settings
+VIDEO_DURATION = 20   # Duration in seconds for each recording segment
+
+# File Paths
+VIDEO_CACHE_DIR = "./video_cache/"
+PHOTO_CACHE_DIR = "./photo_cache/"
+
+# Camera Settings
+FRAME_RATE = 30
+VIDEO_BITRATE = 4000000
+VIDEO_RESOLUTION = (1280, 720)  # Main recording resolution
+LORES_RESOLUTION = (320, 180)   # Lower resolution for motion detection processing

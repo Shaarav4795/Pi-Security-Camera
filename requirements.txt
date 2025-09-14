@@ -1,0 +1,7 @@
+# Core camera and image processing
+picamera2>=0.3.17
+numpy>=1.21.0
+opencv-python>=4.5.0
+
+# Discord webhook integration
+requests>=2.25.0
