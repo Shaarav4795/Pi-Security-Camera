@@ -2,17 +2,17 @@
 
 A smart continuous recording security camera that uses motion detection to preserve footage, captures photos, and uploads everything to Discord for free cloud storage.
 
-## 🚀 What It Does
+## What It Does
 
-- 🔄 **Continuous Recording**: Records in 20-second segments automatically
-- 🎯 **Smart Preservation**: Only keeps segments with detected motion
-- 📸 **Instant Photos**: Captures high-res photos when motion detected  
-- 🎥 **Pre/Post Context**: See what happened before, during, and after motion events
-- 📤 **Discord Upload**: Automatically uploads to Discord via webhook
-- 🗑️ **Auto Cleanup**: Deletes local files after successful upload
-- 📅 **Beautiful Timestamps**: "Motion detected!\nTimestamp: 14th September 2025 at 3:05 pm"
+- **Continuous Recording**: Records in 20-second segments automatically
+- **Smart Preservation**: Only keeps segments with detected motion
+- **Instant Photos**: Captures high-res photos when motion detected  
+- **Pre/Post Context**: See what happened before, during, and after motion events
+- **Discord Upload**: Automatically uploads to Discord via webhook
+- **Auto Cleanup**: Deletes local files after successful upload
+- **Beautiful Timestamps**: "Motion detected!\nTimestamp: 14th September 2025 at 3:05 pm"
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Raspberry Pi (tested on Pi 4) with camera module
 - Raspberry Pi OS (Debian-based)
@@ -66,12 +66,12 @@ DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/your/webhook/url/here"
 ./run.sh
 ```
 
-🎉 **That's it!** Your security camera is now continuously recording and monitoring for motion.
+**That's it!** Your security camera is now continuously recording and monitoring for motion.
 
-## 🛑 How to Stop
+## How to Stop
 Press **Ctrl+C** to stop the security system safely.
 
-## 📁 Project Structure
+## Project Structure
 ```
 Raspi-Security-Camera/
 ├── env/                         # Virtual environment 
@@ -88,7 +88,7 @@ Raspi-Security-Camera/
 └── README.md                    # This documentation
 ```
 
-## ⚙️ How It Works
+## How It Works
 
 ### Continuous Recording System
 ```
@@ -105,7 +105,7 @@ Result:    Discarded   → Discord   Discarded   → Discord
 5. **Discord Upload**: Photos and videos are uploaded with beautiful timestamps
 6. **Storage Management**: Local files are deleted after successful upload
 
-## 🔧 Configuration Options
+## Configuration Options
 
 Edit `config.py` to customize:
 
@@ -127,7 +127,7 @@ PHOTO_CACHE_DIR = "./photo_cache"
 DISCORD_WEBHOOK_URL = "your_webhook_url_here"
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Camera Issues
 ```bash
@@ -157,7 +157,7 @@ sudo reboot
 - **Not sensitive enough**: Decrease `MOTION_THRESHOLD` 
 - **False triggers**: Adjust camera position to avoid moving shadows/leaves
 
-## 🚀 Running on Startup (Auto-Start)
+## Running on Startup (Auto-Start)
 
 To automatically start on boot:
 
@@ -171,7 +171,7 @@ crontab -e
 
 Or create a systemd service for more robust startup control.
 
-## 📊 Performance & Storage
+## Performance & Storage
 
 ### System Requirements
 - **CPU**: ~15-25% on Pi 4 during recording
@@ -184,7 +184,7 @@ Or create a systemd service for more robust startup control.
 - **Videos**: ~4-6MB per 20-second segment (H.264→MP4)
 - **Continuous recording**: No permanent storage impact (auto-cleanup)
 
-## 🔒 Security & Privacy
+## Security & Privacy
 
 - **Local Processing**: All motion detection happens on-device
 - **Secure Webhooks**: Discord webhooks use HTTPS encryption
@@ -192,7 +192,7 @@ Or create a systemd service for more robust startup control.
 - **No Third Parties**: No external services beyond Discord
 - **Webhook Security**: Keep your webhook URL private
 
-## 🛠️ Advanced Usage
+## Advanced Usage
 
 ### Custom Motion Zones
 Edit `motion_detector.py` to define specific areas for motion detection.
@@ -200,27 +200,13 @@ Edit `motion_detector.py` to define specific areas for motion detection.
 ### Multiple Cameras  
 Run multiple instances with different camera indices and Discord channels.
 
-### Integration Options
+### Integration Options (feel free to create a pull request for these!)
 - Home Assistant integration via webhooks
 - SMS alerts via Twilio
 - Email notifications via SMTP
 
-## 📝 Changelog
 
-### v2.0 - Continuous Recording
-- ✨ Continuous 20-second segment recording
-- 🎯 Smart motion-based preservation  
-- 📸 Pre-motion context capture
-- 🎨 Beautiful Discord timestamp formatting
-- ⚡ Improved system performance
-- 🧹 Automatic cleanup and storage management
-
-### v1.0 - Initial Release
-- Basic motion detection
-- Photo and video capture
-- Discord webhook integration
-
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -228,15 +214,12 @@ Run multiple instances with different camera indices and Discord channels.
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
 
-MIT License - feel free to use and modify for your projects!
-
-## 💡 Need Help?
+## Need Help?
 
 - Check the troubleshooting section above
 - Review the configuration options
 - Test your camera with `libcamera-hello`
 - Verify your Discord webhook URL
 
-Happy monitoring! 🏠👁️
+Happy monitoring!
